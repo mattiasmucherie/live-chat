@@ -3,8 +3,8 @@
     <v-layout text-xs-center wrap justify-center align-center fill-height>
       <v-flex xs12 sm10 md8 lg6>
         <v-card class="pa-4">
-          <h1 class="display-2 font-weight-bold mb-3">Welcome</h1>
-          <v-layout row wrap justify-center>
+          <h1 class="display-3 m-4">Welcome</h1>
+          <v-layout mt-4 row wrap justify-center>
             <v-flex sm8 md4>
               <v-text-field v-model="name" label="Enter your name:"></v-text-field>
             </v-flex>
@@ -16,6 +16,7 @@
             </v-flex>
           </v-layout>
         </v-card>
+        <v-alert v-if="feedback" value="true" type="error">{{feedback}}</v-alert>
       </v-flex>
     </v-layout>
   </v-container>
@@ -24,11 +25,20 @@
 <script>
 export default {
   data: () => ({
-    name: null
+    name: null,
+    feedback: null
   }),
   methods: {
     enterChat() {
-      console.log(this.name);
+      if (this.name) {
+        this.feedback = null;
+        this.$router.push({
+          name: "Chat",
+          params: { name: this.name }
+        });
+      } else {
+        this.feedback = "You must enter a name to join";
+      }
     }
   }
 };
