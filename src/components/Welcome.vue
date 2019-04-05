@@ -1,14 +1,14 @@
 <template>
   <v-container fill-height class="mt-5">
     <v-layout text-xs-center wrap justify-center fill-height>
-      <v-flex xs12 sm10 md8 lg6>
-        <v-card class="pa-4 my-4">
+      <v-flex xs12 sm10 md6 lg4>
+        <v-card class="pa-5 my-5">
           <h1 class="display-3">
             Welcome to
-            <span class="purple--text">Live</span>Chat
+            <span class="purple--text">test</span>test
           </h1>
-          <v-layout mt-5 row wrap justify-center>
-            <v-flex sm8 md4>
+          <v-layout mt-5 column wrap justify-center>
+            <v-flex xs6 sm6 md4 mx-5>
               <v-text-field v-model="name" label="Enter your name:" color="purple"></v-text-field>
             </v-flex>
             <v-flex sm4>

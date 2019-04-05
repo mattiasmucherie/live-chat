@@ -1,22 +1,26 @@
 <template>
   <v-app>
-    <v-toolbar app>
+    <v-toolbar flat app>
       <v-toolbar-title class="headline text-uppercase">
-        <span class="purple--text">LIVE</span>
-        <span class="font-weight-light">CHAT</span>
+        <router-link class="toolbar-title" to="/">
+          <span class="purple--text">LIVE</span>
+          <span class="font-weight-light">CHAT</span>
+        </router-link>
       </v-toolbar-title>
     </v-toolbar>
 
     <v-content>
       <router-view></router-view>
     </v-content>
+    <Footer/>
   </v-app>
 </template>
 
 <script>
+import Footer from "@/components/Footer.vue";
 export default {
   name: "App",
-  components: {},
+  components: { Footer },
   data() {
     return {
       //
@@ -24,3 +28,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+.toolbar-title {
+  color: inherit;
+  text-decoration: inherit;
+}
+</style>
+
