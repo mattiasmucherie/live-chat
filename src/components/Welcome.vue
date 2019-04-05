@@ -5,7 +5,7 @@
         <v-card class="pa-5 my-5">
           <h1 class="display-3">
             Welcome to
-            <span class="purple--text">test</span>test
+            <span class="purple--text">Live</span>Chat
           </h1>
           <v-layout mt-5 column wrap justify-center>
             <v-flex xs6 sm6 md4 mx-5>
